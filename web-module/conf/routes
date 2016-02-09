@@ -1,0 +1,19 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           @controllers.MainController.index
+GET     /activate             @controllers.ActivationController.activate(code: String ?= "")
+GET     /recharge.html                   controllers.OperationsController.recharge()
+GET     /expenses.html                   controllers.OperationsController.expenses()
+GET     /callback                   org.pac4j.play.CallbackController.callback()
+POST    /callback                   org.pac4j.play.CallbackController.callback()
+GET     /logout                     org.pac4j.play.CallbackController.logoutAndRedirect()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+
+
+

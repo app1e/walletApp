@@ -1,0 +1,11 @@
+
+@(title: String, profile : org.pac4j.core.profile.CommonProfile, ex: java.lang.Boolean)
+@main(title, "", profile) {
+    <h1>@title</h1>
+    <br /> <br />
+    <hr />
+
+    <p>User: @profile.getDisplayName</p>
+
+    <p>@ex<p>
+}
